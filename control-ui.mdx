@@ -3,39 +3,44 @@ title: Control UI
 description: The browser-based dashboard for managing your gateway
 ---
 
-The Control UI is the full management interface for your OpenClaw gateway. It's organized into 4 groups with 13 tabs.
+The Control UI is the full management interface for your OpenClaw gateway. It runs at `https://your-slug.openclaws.biz` and is organized into **4 tab groups** with **13 tabs** total.
 
 ## Tab Overview
 
-<CardGroup cols={4}>
-  <Card title="Chat" icon="message">
-    - Chat
-  </Card>
-  <Card title="Control" icon="gauge">
-    - Overview
-    - Channels
-    - Instances
-    - Sessions
-    - Usage
-    - Cron Jobs
-  </Card>
-  <Card title="Agent" icon="robot">
-    - Agents
-    - Skills
-    - Nodes
-  </Card>
-  <Card title="Settings" icon="gear">
-    - Config
-    - Debug
-    - Logs
-  </Card>
-</CardGroup>
+### Chat
+
+The primary interface for talking to your AI assistant. Supports multi-turn conversations with full access to all connected toolkits and skills.
+
+### Control
+
+| Tab | Description |
+|-----|-------------|
+| **Overview** | Dashboard showing gateway status, connected services, and recent activity |
+| **Channels** | Configure messaging channels — Telegram, Discord, WhatsApp, Slack, Google Chat, Signal, iMessage, Nostr |
+| **Instances** | Manage running OpenClaw instances and their configurations |
+| **Sessions** | View and manage conversation sessions with your AI |
+| **Usage** | Monitor token usage, API calls, and resource consumption |
+| **Cron Jobs** | Schedule recurring tasks like morning briefings or periodic reports |
+
+### Agent
+
+| Tab | Description |
+|-----|-------------|
+| **Agents** | Configure AI agent behavior, system prompts, and capabilities |
+| **Skills** | Browse and enable the 51+ built-in skills your assistant can use |
+| **Nodes** | Manage connected devices and nodes that can interact with your gateway |
+
+### Settings
+
+| Tab | Description |
+|-----|-------------|
+| **Config** | Core gateway configuration — model selection, API keys, environment variables |
+| **Debug** | Real-time debugging tools for troubleshooting agent behavior |
+| **Logs** | View gateway logs including agent actions, tool calls, and errors |
 
 ## Accessing the Control UI
 
-Your Control UI is at `https://your-slug.openclaws.biz`. Click **"Open your OpenClaw"** from the Dashboard to open it with auto-authentication.
-
-The gateway token is passed automatically via the URL hash.
+Click **"Open your OpenClaw"** from the Dashboard or Settings page. The gateway token is passed automatically via the URL hash — you'll be auto-authenticated.
 
 ## Device Pairing
 
