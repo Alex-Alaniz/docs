@@ -2,42 +2,59 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "OpenClaws",
-  "description": "Deploy your own 24/7 AI assistant with 1000+ integrations. Managed OpenClaw hosting by BearifiedCo.",
   "colors": {
     "primary": "#DC2626",
     "light": "#F4F4F5",
     "dark": "#0A0A0A"
   },
+  "favicon": "/favicon.svg",
   "logo": {
-    "light": "/images/logo.svg",
-    "dark": "/images/logo.svg",
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
     "href": "https://openclaws.biz"
   },
-  "favicon": "/images/logo.svg",
-  "fonts": {
-    "family": "Inter"
-  },
   "appearance": {
-    "default": "dark",
-    "strict": false
-  },
-  "background": {
-    "decoration": "gradient"
+    "default": "dark"
   },
   "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["index", "quickstart", "control-ui"]
+          },
+          {
+            "group": "Features",
+            "pages": ["chat", "toolkits", "skills", "channels", "cron-jobs"]
+          },
+          {
+            "group": "Configuration",
+            "pages": ["models", "byo-keys", "agents", "sessions", "nodes"]
+          },
+          {
+            "group": "Infrastructure",
+            "pages": ["gateway", "config", "debug-logs", "usage"]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/connect-gmail",
+              "guides/connect-github",
+              "guides/setup-telegram",
+              "guides/schedule-briefing"
+            ]
+          }
+        ]
+      }
+    ],
     "global": {
-      "tabs": [
-        {
-          "tab": "Documentation",
-          "href": "/",
-          "icon": "book"
-        },
-        {
-          "tab": "Guides",
-          "href": "/guides",
-          "icon": "compass"
-        }
-      ],
       "anchors": [
         {
           "anchor": "Discord",
@@ -50,29 +67,7 @@
           "icon": "arrow-up-right-from-square"
         }
       ]
-    },
-    "groups": [
-      {
-        "group": "Getting Started",
-        "pages": ["index", "quickstart", "control-ui"]
-      },
-      {
-        "group": "Features",
-        "pages": ["chat", "toolkits", "skills", "channels", "cron-jobs"]
-      },
-      {
-        "group": "Configuration",
-        "pages": ["models", "byo-keys", "agents", "sessions", "nodes"]
-      },
-      {
-        "group": "Infrastructure",
-        "pages": ["gateway", "config", "debug-logs", "usage"]
-      },
-      {
-        "group": "Guides",
-        "pages": ["guides/connect-gmail", "guides/connect-github", "guides/setup-telegram", "guides/schedule-briefing"]
-      }
-    ]
+    }
   },
   "navbar": {
     "links": [
@@ -87,6 +82,9 @@
       "href": "https://openclaws.biz/login"
     }
   },
+  "contextual": {
+    "options": ["copy", "view", "claude"]
+  },
   "footer": {
     "socials": {
       "x": "https://x.com/openclaws",
@@ -98,8 +96,7 @@
         "header": "Product",
         "items": [
           { "label": "Dashboard", "href": "https://openclaws.biz/dashboard" },
-          { "label": "Pricing", "href": "https://openclaws.biz/#pricing" },
-          { "label": "Toolkits", "href": "https://openclaws.biz/dashboard/toolkits" }
+          { "label": "Pricing", "href": "https://openclaws.biz/#pricing" }
         ]
       },
       {
@@ -110,11 +107,5 @@
         ]
       }
     ]
-  },
-  "search": {
-    "prompt": "Search OpenClaws docs..."
-  },
-  "contextual": {
-    "options": ["copy", "view", "claude"]
   }
 }
