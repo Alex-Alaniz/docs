@@ -5,13 +5,19 @@ description: Connect your AI to WhatsApp, Telegram, Discord, and more
 
 Connect your AI assistant to **8 messaging platforms** so you can talk to it from anywhere.
 
-## Supported Channels
+<Info>
+  **Channels vs Toolkits** — Channels make your AI a **live chat participant** (it receives and replies to messages in real-time). Toolkits give your AI **outbound API access** (it can search Slack history, pin messages, create GitHub issues). They're complementary — you might connect Slack as both a channel (for live chat) and a toolkit (for API actions). See [Toolkits](/toolkits) for details.
+</Info>
+
+## Cloud Channels
+
+These channels work out of the box with your managed gateway. Configure them in the **Channels** tab of your Control UI.
 
 <AccordionGroup>
   <Accordion title="WhatsApp" icon="whatsapp">
     Link via QR code. Click **Show QR** in the Channels tab, scan with WhatsApp on your phone.
 
-    Use **Relink** if the session expires, **Logout** to disconnect.
+    Uses the Baileys Web bridge — no WhatsApp Business API required. Use **Relink** if the session expires, **Logout** to disconnect.
   </Accordion>
 
   <Accordion title="Telegram" icon="telegram">
@@ -19,27 +25,19 @@ Connect your AI assistant to **8 messaging platforms** so you can talk to it fro
 
     Supports long polling (default) or webhook mode. Set `dmPolicy` to control who can message your bot (pairing/allowlist/open).
 
-    See [Telegram setup guide](https://docs.openclaw.ai/channels/telegram).
+    See [Telegram setup guide](/guides/setup-telegram).
   </Accordion>
 
   <Accordion title="Discord" icon="discord">
-    Create a Discord bot, add it to your server, and paste the bot token in config. The bot responds to mentions and DMs.
+    Create a Discord bot in the [Discord Developer Portal](https://discord.com/developers), add it to your server, and paste the bot token in config. The bot responds to mentions and DMs.
   </Accordion>
 
   <Accordion title="Slack" icon="slack">
-    Connects via Socket Mode. Configure your Slack app token and bot token in the config section.
+    Connects via Socket Mode. Create a Slack app, enable Socket Mode, and configure your app token (`xapp-...`) and bot token (`xoxb-...`) in the Channels config.
   </Accordion>
 
   <Accordion title="Google Chat" icon="google">
-    Uses Chat API webhooks. Configure your service account credentials and audience settings.
-  </Accordion>
-
-  <Accordion title="Signal" icon="shield-halved">
-    Requires a running `signal-cli` REST API server. Configure the base URL in settings.
-  </Accordion>
-
-  <Accordion title="iMessage" icon="apple">
-    macOS-only bridge. Requires a Mac running the iMessage bridge service.
+    Uses Chat API with a service account. Configure your service account JSON credentials and audience settings.
   </Accordion>
 
   <Accordion title="Nostr" icon="hashtag">
@@ -47,4 +45,50 @@ Connect your AI assistant to **8 messaging platforms** so you can talk to it fro
   </Accordion>
 </AccordionGroup>
 
-Each channel shows live status (Configured, Running, Connected) and health metrics. Use the **Probe** button to test connectivity.
+## Local-Only Channels
+
+These channels require **additional hardware or software on your end** and cannot be fully managed by OpenClaws.
+
+<AccordionGroup>
+  <Accordion title="iMessage (BlueBubbles)" icon="apple">
+    Uses the [BlueBubbles](https://bluebubbles.app) bridge for iMessage access. Supports full iMessage features: tapbacks, typing indicators, attachments, effects, group chats, and reply threading.
+
+    **Requirements:**
+    - A **dedicated Mac** (Mac mini recommended) running macOS with the BlueBubbles server app
+    - Your Apple ID signed into Messages.app on that Mac
+    - The Mac must stay powered on 24/7 with sleep disabled
+
+    <Warning>
+      Apple requires macOS hardware for iMessage. There is no cloud-only path — each user needs their own Mac running BlueBubbles. This channel cannot be provisioned as part of the managed OpenClaws service.
+    </Warning>
+
+    See [OpenClaw docs: BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) for full setup.
+  </Accordion>
+
+  <Accordion title="Signal" icon="shield-halved">
+    Requires a running `signal-cli` REST API server on your own infrastructure. Configure the base URL in the Channels config.
+
+    <Warning>
+      Signal requires a dedicated phone number and the signal-cli daemon running locally. This channel cannot be provisioned as part of the managed OpenClaws service.
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+## Channel Authentication
+
+All channels use **direct bot tokens or credentials** configured in your gateway's Control UI — they do **not** use Composio OAuth connections.
+
+| Channel | Auth Method |
+|---------|-------------|
+| WhatsApp | QR code pairing (Baileys Web) |
+| Telegram | Bot token from @BotFather |
+| Discord | Bot token from Developer Portal |
+| Slack | Bot token + App token (Socket Mode) |
+| Google Chat | Service account JSON |
+| Nostr | NIP-04 keypair |
+| iMessage | BlueBubbles server password |
+| Signal | signal-cli REST API URL |
+
+<Tip>
+  Each channel shows live status (**Configured**, **Running**, **Connected**) and health metrics in the Control UI. Use the **Probe** button to test connectivity.
+</Tip>
