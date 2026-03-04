@@ -1,0 +1,50 @@
+---
+title: Messaging Channels
+description: Connect your AI to WhatsApp, Telegram, Discord, and more
+---
+
+Connect your AI assistant to **8 messaging platforms** so you can talk to it from anywhere.
+
+## Supported Channels
+
+<AccordionGroup>
+  <Accordion title="WhatsApp" icon="whatsapp">
+    Link via QR code. Click **Show QR** in the Channels tab, scan with WhatsApp on your phone.
+
+    Use **Relink** if the session expires, **Logout** to disconnect.
+  </Accordion>
+
+  <Accordion title="Telegram" icon="telegram">
+    Create a bot via **@BotFather** on Telegram, copy the bot token, and paste it in the Telegram config section.
+
+    Supports long polling (default) or webhook mode. Set `dmPolicy` to control who can message your bot (pairing/allowlist/open).
+
+    See [Telegram setup guide](https://docs.openclaw.ai/channels/telegram).
+  </Accordion>
+
+  <Accordion title="Discord" icon="discord">
+    Create a Discord bot, add it to your server, and paste the bot token in config. The bot responds to mentions and DMs.
+  </Accordion>
+
+  <Accordion title="Slack" icon="slack">
+    Connects via Socket Mode. Configure your Slack app token and bot token in the config section.
+  </Accordion>
+
+  <Accordion title="Google Chat" icon="google">
+    Uses Chat API webhooks. Configure your service account credentials and audience settings.
+  </Accordion>
+
+  <Accordion title="Signal" icon="shield-halved">
+    Requires a running `signal-cli` REST API server. Configure the base URL in settings.
+  </Accordion>
+
+  <Accordion title="iMessage" icon="apple">
+    macOS-only bridge. Requires a Mac running the iMessage bridge service.
+  </Accordion>
+
+  <Accordion title="Nostr" icon="hashtag">
+    Decentralized DMs via NIP-04 relays. Edit your Nostr profile (name, bio, avatar, NIP-05) directly from the Channels tab.
+  </Accordion>
+</AccordionGroup>
+
+Each channel shows live status (Configured, Running, Connected) and health metrics. Use the **Probe** button to test connectivity.

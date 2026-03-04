@@ -1,0 +1,50 @@
+---
+title: Control UI
+description: The browser-based dashboard for managing your gateway
+---
+
+The Control UI is the full management interface for your OpenClaw gateway. It's organized into 4 groups with 13 tabs.
+
+## Tab Overview
+
+<CardGroup cols={4}>
+  <Card title="Chat" icon="message">
+    - Chat
+  </Card>
+  <Card title="Control" icon="gauge">
+    - Overview
+    - Channels
+    - Instances
+    - Sessions
+    - Usage
+    - Cron Jobs
+  </Card>
+  <Card title="Agent" icon="robot">
+    - Agents
+    - Skills
+    - Nodes
+  </Card>
+  <Card title="Settings" icon="gear">
+    - Config
+    - Debug
+    - Logs
+  </Card>
+</CardGroup>
+
+## Accessing the Control UI
+
+Your Control UI is at `https://your-slug.openclaws.biz`. Click **"Open your OpenClaw"** from the Dashboard to open it with auto-authentication.
+
+The gateway token is passed automatically via the URL hash.
+
+## Device Pairing
+
+New browser connections require a one-time pairing approval.
+
+When you use the "Open your OpenClaw" button, the gateway token is included automatically. You may still need to approve the device on first connection.
+
+<Warning>
+  Each browser profile gets a unique device ID. Clearing browser data will require re-pairing.
+</Warning>
+
+See [OpenClaw docs: Device Pairing](https://docs.openclaw.ai/web/control-ui#device-pairing-first-connection) for details.

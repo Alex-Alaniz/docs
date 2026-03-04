@@ -1,0 +1,40 @@
+---
+title: Set Up Telegram
+description: Message your AI assistant from Telegram
+---
+
+Connect a Telegram bot so you can chat with your AI assistant from the Telegram app.
+
+## Prerequisites
+
+- A Telegram account
+- Your OpenClaw gateway must be **running**
+
+## Steps
+
+<Steps>
+  <Step title="Create a Telegram Bot">
+    Open Telegram and message [@BotFather](https://t.me/BotFather). Send `/newbot` and follow the prompts to create a bot. Copy the **bot token**.
+  </Step>
+  <Step title="Open Control UI">
+    Click **"Open your OpenClaw"** from the Dashboard to access your Control UI.
+  </Step>
+  <Step title="Configure Telegram">
+    Go to **Channels** tab in the Control UI. Find the Telegram section and paste your bot token.
+  </Step>
+  <Step title="Set DM Policy">
+    Choose who can message your bot:
+    - **Pairing** — requires device pairing approval
+    - **Allowlist** — only approved users
+    - **Open** — anyone can message
+  </Step>
+  <Step title="Test">
+    Open Telegram and send a message to your bot. Your AI should respond.
+  </Step>
+</Steps>
+
+<Tip>
+  For the most secure setup, use **Pairing** mode. New users will need to be approved before they can chat with your bot.
+</Tip>
+
+See [OpenClaw docs: Telegram](https://docs.openclaw.ai/channels/telegram) for advanced configuration.

@@ -1,0 +1,44 @@
+---
+title: Skills
+description: 51+ pre-packaged capabilities for your AI assistant
+---
+
+Your gateway comes with **51 built-in skills** — pre-packaged capabilities like GitHub, Notion, Slack, Discord, image generation, PDF editing, text-to-speech, and more.
+
+## Skill Status
+
+| Status | Meaning |
+|--------|---------|
+| <Icon icon="circle" color="green" /> **Eligible** | Ready to use, all dependencies met |
+| <Icon icon="circle" color="red" /> **Blocked** | Missing requirements (binary, API key, config, or OS) |
+
+## Enabling Blocked Skills
+
+For blocked skills, the UI shows exactly what's missing:
+
+- **Missing API key** — paste your key in the skill's "API key" field and click Save
+- **Missing binary** — click the "Install" button (e.g., "Install GitHub CLI (brew)")
+- **Missing config** — configure the related channel or plugin first
+
+## Popular Skills
+
+<CardGroup cols={3}>
+  <Card title="GitHub" icon="github">Manage repos, issues, and PRs</Card>
+  <Card title="Notion" icon="n">Create and search pages</Card>
+  <Card title="Slack" icon="slack">Send messages, read channels</Card>
+  <Card title="Discord" icon="discord">Bot interactions and DMs</Card>
+  <Card title="OpenAI Image Gen" icon="image">Generate images with DALL-E</Card>
+  <Card title="PDF Editor" icon="file-pdf">Create and edit PDFs</Card>
+  <Card title="Whisper (STT)" icon="microphone">Speech-to-text transcription</Card>
+  <Card title="ElevenLabs (TTS)" icon="volume-high">Text-to-speech synthesis</Card>
+  <Card title="Weather" icon="cloud-sun">Current conditions and forecasts</Card>
+  <Card title="Coding Agent" icon="code">Autonomous code generation</Card>
+  <Card title="Spotify" icon="spotify">Music playback control</Card>
+  <Card title="ClawHub" icon="store">Community skill marketplace</Card>
+</CardGroup>
+
+## Skills vs Toolkits
+
+Skills are **built-in gateway capabilities** that use CLI tools, APIs, or local binaries. Toolkits are **external services** connected via OAuth through Composio.
+
+Both are available to your AI assistant — skills are always loaded, while toolkits require OAuth connection from the Dashboard.

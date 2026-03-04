@@ -1,0 +1,61 @@
+---
+title: Toolkits
+description: Connect 1000+ services to your AI assistant via OAuth
+---
+
+Toolkits are OAuth-connected external services managed from the OpenClaws dashboard. When you connect a toolkit, your gateway automatically gets access to it.
+
+## How the Bridge Works
+
+1. You connect a service (e.g., Gmail) on the **Toolkits** page via OAuth
+2. Composio stores the OAuth tokens securely
+3. At gateway provisioning, OpenClaws injects `COMPOSIO_API_KEY` and your `COMPOSIO_ENTITY_ID` into the gateway
+4. The gateway's **Composio skill** discovers connected services and executes actions using your OAuth tokens
+
+<Info>
+  You can connect toolkits **before subscribing**. They'll be available immediately when your gateway deploys.
+</Info>
+
+## Connecting a Toolkit
+
+<Steps>
+  <Step title="Browse toolkits">
+    Go to **Dashboard → Toolkits**. Search across 980+ available services.
+  </Step>
+  <Step title="Click Connect">
+    Click the **Connect** button on the toolkit card. You'll be redirected to the service's OAuth page.
+  </Step>
+  <Step title="Authorize">
+    Grant access. You'll be redirected back to OpenClaws with an **Active** badge on the card.
+  </Step>
+  <Step title="Use it">
+    Ask your AI assistant to use the service. It discovers connected toolkits automatically.
+  </Step>
+</Steps>
+
+## Popular Toolkits
+
+| Service | What Your AI Can Do |
+|---------|-------------------|
+| **Gmail** | Read emails, get profile info, search messages |
+| **GitHub** | List repos, manage issues, star repos |
+| **Google Calendar** | List events, create meetings, check availability |
+| **Notion** | Search pages, create content, query databases |
+| **Linear** | List teams, manage issues, track projects |
+| **Slack** | Send messages, read channels |
+| **Google Sheets** | Read/write spreadsheet data |
+| **Google Drive** | Search and manage files |
+| **Jira** | Manage tickets and sprints |
+| **HubSpot** | CRM operations |
+
+## Toolkits vs Skills
+
+| | Toolkits | Skills |
+|---|---------|--------|
+| **Where** | OpenClaws Dashboard | Control UI → Skills tab |
+| **How** | OAuth via Composio | Built into gateway |
+| **Count** | 980+ services | 51 bundled |
+| **Auth** | OAuth tokens (managed) | API keys or CLI tools |
+| **Examples** | Gmail, GitHub, Notion | Weather, PDF Editor, Whisper |
+
+Toolkits connect external services via OAuth. Skills are built-in capabilities that may use CLI tools, APIs, or local binaries.

@@ -1,0 +1,54 @@
+---
+title: Schedule a Morning Briefing
+description: Get a daily summary of your calendar, emails, and tasks
+---
+
+Set up a cron job that gives you a morning briefing every day — summarizing your calendar, unread emails, and pending tasks.
+
+## Prerequisites
+
+- Gateway must be **running**
+- Connect **Gmail**, **Google Calendar**, and optionally **Linear** or **Notion** toolkits
+
+## Steps
+
+<Steps>
+  <Step title="Open Control UI">
+    Click **"Open your OpenClaw"** from the Dashboard.
+  </Step>
+  <Step title="Go to Cron Jobs">
+    Navigate to the **Cron Jobs** tab in the Control section.
+  </Step>
+  <Step title="Create New Job">
+    - **Name**: Morning Briefing
+    - **Schedule**: At 8:00 AM (your timezone)
+    - **Execution**: Isolated
+    - **Prompt**: "Give me a morning briefing: summarize my Google Calendar events for today, check for urgent unread Gmail messages, and list any in-progress Linear issues assigned to me."
+    - **Delivery**: Announce (posts to chat)
+  </Step>
+  <Step title="Enable">
+    Toggle the job to **enabled**. It will run at 8 AM every day.
+  </Step>
+</Steps>
+
+## Example Output
+
+Your AI might respond with something like:
+
+> **Morning Briefing — March 4, 2026**
+>
+> **Calendar (3 events):**
+> - 9:00 AM — Storefront M2: iOS B2B Polish
+> - 12:00 PM — Bridge Intro Meeting (Google Meet)
+> - 2:00 PM — Storefront M2: Device Pairing Flow
+>
+> **Email (2 urgent):**
+> - Invoice from AWS — payment reminder
+> - Team standup notes from yesterday
+>
+> **Linear (1 in-progress):**
+> - Fix Solana transactions not showing (Urgent)
+
+<Tip>
+  You can adjust the prompt anytime. Try adding "and suggest 3 priorities for the day" for AI-powered task prioritization.
+</Tip>

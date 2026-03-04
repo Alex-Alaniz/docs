@@ -1,0 +1,52 @@
+---
+title: Gateway
+description: Your dedicated OpenClaw instance on Fly.io
+---
+
+Each subscriber gets a dedicated **OpenClaw gateway** — an isolated container running on Fly.io infrastructure.
+
+## Specifications
+
+| Resource | Value |
+|----------|-------|
+| **CPU** | 2 shared CPUs |
+| **RAM** | 2 GB |
+| **Storage** | Persistent volume at `/data` |
+| **Region** | US East (iad) by default |
+| **URL** | `https://oc-{slug}.fly.dev` |
+| **Subdomain** | `https://{slug}.openclaws.biz` |
+
+## Lifecycle
+
+```
+Subscribe → Provisioning (~30s) → Running → [Destroy] → Stopped
+```
+
+- **Provisioning** — Fly.io creates your app, volume, and machine
+- **Running** — Gateway is healthy, Control UI accessible
+- **Error** — Something went wrong (check Settings for details)
+- **Deleting** — Gateway is being torn down
+
+## Managing Your Gateway
+
+From **Settings → OpenClaw Gateway**:
+
+- **Open OpenClaw** — launches Control UI with auto-auth
+- **Access Token** — copy the gateway token for manual connections
+- **Destroy Instance** — tears down the Fly.io machine and volume
+
+<Warning>
+  Destroying your instance removes all data including conversations, memories, and cron jobs. This cannot be undone.
+</Warning>
+
+## What's Injected at Provisioning
+
+Your gateway receives these environment variables:
+
+| Variable | Source |
+|----------|--------|
+| `ANTHROPIC_API_KEY` | Your BYO key or platform managed key |
+| `OPENAI_API_KEY` | Your BYO key (if configured) |
+| `COMPOSIO_API_KEY` | Platform Composio key |
+| `COMPOSIO_ENTITY_ID` | Your unique Composio entity |
+| `OPENCLAW_GATEWAY_TOKEN` | Auto-generated auth token |

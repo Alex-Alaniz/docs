@@ -1,0 +1,43 @@
+---
+title: Bring Your Own Keys
+description: Use your own API keys for full control over costs and model access
+---
+
+Use your own API keys for full control over costs and model access.
+
+## Supported Key Types
+
+| Key Type | Format | Provider |
+|----------|--------|----------|
+| **Anthropic API Key** | `sk-ant-api...` | Anthropic Console |
+| **Anthropic OAuth Token** | `sk-ant-oat01-...` | `claude setup-token` CLI |
+| **OpenAI API Key** | `sk-...` | OpenAI Dashboard |
+
+## Adding a Key
+
+1. Go to **Settings → API Keys** on the OpenClaws dashboard
+2. Paste your key in the input field
+3. Click **Save**
+
+The key type is auto-detected from the prefix. Your gateway will use the new key on the next request.
+
+## Security
+
+<Info>
+  All keys are **encrypted at rest** using AES-256 via Supabase pgcrypto. Keys are only decrypted server-side when pushed to your isolated gateway environment variables.
+</Info>
+
+Keys are never:
+- Stored in plaintext
+- Logged or displayed after saving
+- Shared between users
+- Accessible via the API after creation
+
+## Priority Order
+
+When multiple keys are configured, the gateway uses this priority:
+
+1. **User's own key** (BYO API key or OAuth token)
+2. **Platform managed key** (included with subscription)
+
+If you remove your BYO key, the gateway falls back to the platform managed key automatically.

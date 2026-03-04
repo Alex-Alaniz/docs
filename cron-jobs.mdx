@@ -1,0 +1,39 @@
+---
+title: Cron Jobs
+description: Schedule recurring AI agent tasks
+---
+
+Schedule recurring agent runs from the **Cron Jobs** tab. Great for morning briefings, automated reports, monitoring, or any task you want to run on a schedule.
+
+## Creating a Job
+
+<Steps>
+  <Step title="Name & Agent">
+    Give the job a name and optionally pick a specific agent.
+  </Step>
+  <Step title="Schedule">
+    Choose your schedule type:
+    - **Every** — e.g., every 30 minutes
+    - **At** — specific datetime
+    - **Cron** — cron expression with timezone
+  </Step>
+  <Step title="Execution">
+    - **Main** — posts a system event to the main session
+    - **Isolated** — dedicated agent turn with your prompt
+  </Step>
+  <Step title="Delivery">
+    - **Announce** — posts a summary to chat
+    - **Webhook** — POSTs results to a URL
+    - **None** — keeps it internal
+  </Step>
+</Steps>
+
+## Examples
+
+| Job | Schedule | Prompt |
+|-----|----------|--------|
+| Morning Briefing | `At 8:00 AM EST` | "Give me a summary of my calendar, unread emails, and pending Linear issues" |
+| Inbox Monitor | `Every 30 minutes` | "Check for urgent emails and Slack messages, summarize anything important" |
+| Daily Standup | `Cron: 0 9 * * 1-5` | "Prepare a standup summary: what I did yesterday, what's planned today, blockers" |
+
+The run history panel shows all past executions with status, duration, and output.

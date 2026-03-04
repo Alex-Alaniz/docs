@@ -1,0 +1,41 @@
+---
+title: Connect Gmail
+description: Give your AI assistant access to read and manage your email
+---
+
+Connect your Gmail account so your AI can read emails, search messages, and get your profile info.
+
+## Steps
+
+<Steps>
+  <Step title="Go to Toolkits">
+    Navigate to **Dashboard → Toolkits** and search for "Gmail".
+  </Step>
+  <Step title="Click Connect">
+    Click the **Connect** button on the Gmail card. You'll be redirected to Google's OAuth consent screen.
+  </Step>
+  <Step title="Authorize">
+    Sign in with your Google account and grant access. You'll be redirected back to OpenClaws.
+  </Step>
+  <Step title="Verify">
+    The Gmail card should now show an **Active** badge.
+  </Step>
+  <Step title="Test">
+    Open your Control UI and ask: *"What's my Gmail address and how many messages do I have?"*
+  </Step>
+</Steps>
+
+## What Your AI Can Do
+
+Once connected, your AI assistant can:
+
+| Action | Command |
+|--------|---------|
+| Get profile | `composio-exec GMAIL_GET_PROFILE` |
+| Search messages | `composio-exec GMAIL_SEARCH_MESSAGES` |
+| Read a message | `composio-exec GMAIL_GET_MESSAGE` |
+| List labels | `composio-exec GMAIL_LIST_LABELS` |
+
+<Info>
+  Your AI discovers these actions automatically — just ask naturally. You don't need to know the exact command names.
+</Info>

@@ -1,80 +1,54 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: Quick Start
+description: Get your AI assistant running in under 2 minutes
 ---
 
-## Get started in three steps
+## 1. Sign In
 
-Get your documentation site running locally and make your first customization.
+Go to [openclaws.biz/login](https://openclaws.biz/login) and sign in with **Google** or **X (Twitter)**.
 
-### Step 1: Set up your local environment
+Signing in automatically creates your account — no separate registration needed.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+## 2. Subscribe ($29/month)
 
-### Step 2: Deploy your changes
+Navigate to **Settings → Billing** and click "Subscribe." This opens Stripe Checkout.
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+After payment, your personal AI gateway deploys automatically (~30 seconds). You'll see the status change from "Provisioning" to "Running" on the Settings page.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+<Info>
+  You can connect toolkits and configure API keys **before subscribing**. The gateway will pick up everything when it deploys.
+</Info>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+## 3. Connect Your Toolkits
 
-### Step 3: Go live
+Go to the **Toolkits** page and connect the services you want your AI to access:
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+- **Gmail** — read/send emails
+- **GitHub** — manage repos and issues
+- **Google Calendar** — view/create events
+- **Notion** — search and create pages
+- **Linear** — manage projects and issues
+- **Slack, Google Sheets, Jira** — and 980+ more
 
-## Next steps
+Click **Connect** on any toolkit and authorize via OAuth. Connected services show an **Active** badge.
 
-Now that you have your docs running, explore these key features:
+## 4. Open Your Control UI
 
-<CardGroup cols={2}>
+Click **"Open your OpenClaw"** on the Dashboard or Settings page. This opens your gateway's full Control UI at `https://your-slug.openclaws.biz`.
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
+The gateway token is passed automatically — you'll be auto-authenticated.
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
+## 5. Start Chatting
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
+Use the **Chat** tab in the Control UI to talk directly to your AI assistant. Try:
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
+- "What's on my Google Calendar this week?"
+- "Search my Notion for pages about project planning"
+- "List my recent GitHub repositories"
+- "Read my latest Gmail messages"
 
-</CardGroup>
+Your AI assistant has access to all connected toolkits and can execute actions autonomously.
 
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>
+<Check>
+  **You're live!** Your AI assistant is running 24/7 on dedicated infrastructure with persistent memory.
+</Check>

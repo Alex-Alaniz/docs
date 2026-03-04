@@ -1,0 +1,25 @@
+---
+title: Sessions
+description: Manage conversation contexts and per-session settings
+---
+
+The **Sessions** tab shows all active conversation sessions with per-session overrides.
+
+## Session Settings
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| **Thinking** | off / minimal / low / medium / high | Controls how much reasoning the AI shows |
+| **Verbose** | inherit / off / on / full | Controls response detail level |
+| **Reasoning** | inherit / off / on / stream | Controls reasoning output mode |
+
+## Session Info
+
+Each session displays:
+- **Key** — unique session identifier
+- **Label** — human-readable name
+- **Kind** — direct (chat) or channel (Telegram, Discord, etc.)
+- **Last Update** — when the session was last active
+- **Token Usage** — tokens used vs context limit (e.g., 14,809 / 200,000)
+
+You can delete individual sessions to free resources.

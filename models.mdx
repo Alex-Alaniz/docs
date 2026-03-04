@@ -1,0 +1,39 @@
+---
+title: Model Selection
+description: Choose between Claude, GPT, and more
+---
+
+OpenClaws supports multiple AI models. Switch models in **Settings → Model Selection** on the dashboard, or in **Agents → Model Selection** in the Control UI.
+
+## Available Models
+
+| Model | Provider | Included | Notes |
+|-------|----------|----------|-------|
+| **Claude Sonnet 4.6** | Anthropic | Yes | Fast, capable, great for everyday tasks. Default model. |
+| **Claude Opus 4.6** | Anthropic | Yes | Most capable. Best for complex reasoning and analysis. |
+| **GPT-5.3** | OpenAI | BYO key required | Requires your own OpenAI API key. |
+| **GPT-5.4** | OpenAI | Coming soon | Not yet available. |
+
+## AI Modes
+
+Your gateway can operate in three modes:
+
+<CardGroup cols={3}>
+  <Card title="Platform Managed" icon="cloud">
+    Use the Anthropic API key included with your subscription. No setup needed.
+  </Card>
+  <Card title="BYO API Key" icon="key">
+    Use your own Anthropic or OpenAI API key for direct billing from the provider.
+  </Card>
+  <Card title="BYO OAuth" icon="lock">
+    Use an Anthropic OAuth token generated via `claude setup-token`. Most flexible option.
+  </Card>
+</CardGroup>
+
+## Changing Models
+
+1. Go to **Settings** on the OpenClaws dashboard
+2. Click the model you want under **Model Selection**
+3. The change takes effect immediately for new conversations
+
+You can also change the model per-agent in the Control UI's **Agents → Model Selection** section, with comma-separated fallbacks.

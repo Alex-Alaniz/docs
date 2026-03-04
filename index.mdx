@@ -1,97 +1,50 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: What is OpenClaws?
+description: Deploy your own 24/7 AI assistant with 1000+ integrations
 ---
 
-## Setting up
+OpenClaws is a managed hosting platform for **OpenClaw**, the open-source AI assistant with 80,000+ GitHub stars.
 
-Get your documentation site up and running in minutes.
+Each subscriber gets their own **dedicated AI gateway** — a 24/7 assistant running on isolated infrastructure with persistent memory, 1000+ tool integrations, and 8 messaging channels.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+## How It Works
 
-## Make it yours
+Your gateway runs on its own Fly.io VM with dedicated CPU, RAM, and persistent storage. No data is shared between users.
 
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Dedicated Infrastructure" icon="server">
+    Each user gets an isolated Fly.io machine with 2 shared CPUs, 2GB RAM, and persistent storage at `/data`.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="1000+ Integrations" icon="plug">
+    Connect Gmail, GitHub, Notion, Slack, Linear, and 980+ more services via OAuth through Composio.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="8 Messaging Channels" icon="message">
+    Talk to your AI from WhatsApp, Telegram, Discord, Slack, Google Chat, Signal, iMessage, or Nostr.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Persistent Memory" icon="brain">
+    Your assistant remembers conversations, preferences, and context across sessions.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## Access Levels
 
-Everything you need to create world-class documentation.
+| Stage | What You Can Do |
+|-------|----------------|
+| **Visitor** (no login) | Browse landing page, read docs, view pricing |
+| **Authenticated** (free) | Browse 980+ toolkits, connect OAuth services, configure API keys, select model |
+| **Subscriber** ($29/mo) | Deploy gateway, chat with AI, use Control UI, messaging channels, cron jobs, 51+ skills |
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+<Tip>
+  You can connect toolkits (Gmail, GitHub, etc.) **before subscribing**. When you subscribe, your gateway automatically picks up all connected services.
+</Tip>
 
-## Need inspiration?
+## OpenClaw vs OpenClaws
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+| | OpenClaw | OpenClaws |
+|---|---------|-----------|
+| **What** | Open-source AI assistant | Managed hosting platform |
+| **Run by** | You (self-hosted) | BearifiedCo (managed) |
+| **Setup** | Install on your own hardware | One-click deploy |
+| **Docs** | [docs.openclaw.ai](https://docs.openclaw.ai) | You're here |
+
+For deep dives into OpenClaw internals, see [docs.openclaw.ai](https://docs.openclaw.ai).

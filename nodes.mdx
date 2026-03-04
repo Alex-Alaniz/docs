@@ -1,0 +1,33 @@
+---
+title: Nodes & Devices
+description: Manage execution security and device access
+---
+
+The **Nodes** tab manages execution security and device access.
+
+## Exec Approvals
+
+Control what commands the AI can execute:
+
+| Policy | Security Level | Description |
+|--------|---------------|-------------|
+| **Deny** | Most secure | Block all exec commands |
+| **Allowlist** | Balanced | Only pre-approved commands can run |
+| **Full** | Least secure | Allow all commands |
+
+The "Ask" policy controls whether the UI prompts you for approval:
+- **Off** — never ask
+- **On miss** — ask for unknown commands
+- **Always** — ask before every command
+
+## Device Management
+
+View paired devices, rotate or revoke device tokens, and manage pending pairing requests.
+
+Each device has scoped roles:
+- **Operator** — full access
+- **Admin** — configuration access
+- **Read** — view-only
+- **Write** — edit access
+- **Approvals** — can approve exec requests
+- **Pairing** — can pair new devices
