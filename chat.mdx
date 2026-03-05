@@ -5,7 +5,27 @@ description: Direct conversation interface with your AI assistant
 
 The Chat tab provides a direct conversation interface with your AI assistant.
 
-## Features
+## Chat Modes
+
+OpenClaws supports two chat modes depending on your setup:
+
+### BYO Key Chat (Free)
+
+Chat directly from the Dashboard using your own API key — no subscription or gateway required.
+
+- Add your Anthropic or OpenAI key in **Settings → API Keys**
+- Start chatting immediately from the Dashboard
+- Messages are proxied directly to your AI provider using your encrypted key
+- Rate limited to 10 messages per minute
+- Supports Claude (Sonnet, Opus, Haiku) and GPT models
+
+<Info>
+  BYO Key Chat is a lightweight chat experience. For browser automation, messaging channels, skills, persistent memory, and the full Control UI, subscribe to OpenClaws Pro.
+</Info>
+
+### Gateway Chat (Pro)
+
+With an active subscription, your messages route through your dedicated gateway for the full experience:
 
 - **Message thread** with streaming responses and elapsed timer
 - **Session selector** — switch between conversation contexts or start new ones
@@ -17,7 +37,7 @@ The Chat tab provides a direct conversation interface with your AI assistant.
 
 ## Quick Messages
 
-From the OpenClaws Dashboard, you can send quick messages without opening the full Control UI. The chat input at the bottom of the Dashboard proxies messages to your gateway.
+From the OpenClaws Dashboard, you can send quick messages without opening the full Control UI. The chat input at the bottom of the Dashboard proxies messages to your gateway (or directly to your AI provider in BYO Key mode).
 
 <Tip>
   For the full experience with session management, thinking toggle, and focus mode, use the **Control UI** directly.
