@@ -1,0 +1,58 @@
+---
+title: What is OpenClaws?
+description: Deploy your own 24/7 AI assistant with 1000+ integrations
+---
+
+OpenClaws is a managed hosting platform for **OpenClaw**, the open-source AI assistant with 260,000+ GitHub stars.
+
+Each subscriber gets their own **dedicated AI gateway** — a 24/7 assistant running on isolated infrastructure with persistent memory, 1000+ tool integrations, and 8 messaging channels.
+
+<Info>
+  **Built by a Clawtributor** — OpenClaws is created by [Alex Alaniz](https://github.com/Alex-Alaniz), an active contributor to the OpenClaw open-source project. See [merged contributions on GitHub](https://github.com/openclaw/openclaw/pull/2016) and the [Clawtributor community](https://github.com/openclaw/openclaw#community).
+</Info>
+
+## How It Works
+
+Your gateway runs on its own Fly.io VM with dedicated CPU, RAM, and persistent storage. No data is shared between users.
+
+<CardGroup cols={2}>
+  <Card title="Dedicated Infrastructure" icon="server">
+    Each user gets an isolated Fly.io machine with 2 shared CPUs, 2GB RAM, and persistent storage at `/data`.
+  </Card>
+  <Card title="1000+ Integrations" icon="plug">
+    Connect Gmail, GitHub, Notion, Slack, Linear, and 980+ more services via OAuth through Composio.
+  </Card>
+  <Card title="8 Messaging Channels" icon="message">
+    Talk to your AI from WhatsApp, Telegram, Discord, Slack, Google Chat, Signal, iMessage, or Nostr.
+  </Card>
+  <Card title="Persistent Memory" icon="brain">
+    Your assistant remembers conversations, preferences, and context across sessions.
+  </Card>
+</CardGroup>
+
+## Access Levels
+
+| Stage | What You Can Do |
+|-------|----------------|
+| **Visitor** (no login) | Browse landing page, read docs, view pricing |
+| **Authenticated** (free) | Browse 980+ toolkits, connect OAuth services, configure API keys, select model, **chat with BYO key** |
+| **Subscriber** ($29/mo) | Deploy gateway, full Control UI, messaging channels, cron jobs, 51+ skills, browser automation |
+
+<Tip>
+  **BYO Key Chat** — Bring your own Anthropic or OpenAI key to start chatting immediately, no subscription required. Your key is encrypted and used to call the AI provider directly. See [BYO Keys](/byo-keys) for details.
+</Tip>
+
+<Tip>
+  You can connect toolkits (Gmail, GitHub, etc.) **before subscribing**. When you subscribe, your gateway automatically picks up all connected services.
+</Tip>
+
+## OpenClaw vs OpenClaws
+
+| | OpenClaw | OpenClaws |
+|---|---------|-----------|
+| **What** | Open-source AI assistant | Managed hosting platform built on OpenClaw |
+| **Run by** | Community + [Peter Steinberger](https://github.com/steipete) | [Bearified](https://bearified.co) (by Clawtributor [Alex Alaniz](https://github.com/Alex-Alaniz)) |
+| **Setup** | Install on your own hardware | One-click deploy, fully managed |
+| **Docs** | [docs.openclaw.ai](https://docs.openclaw.ai) | [docs.openclaws.biz](https://docs.openclaws.biz) (this site) |
+
+OpenClaws builds on top of the open-source OpenClaw project. For deep dives into OpenClaw internals, see [docs.openclaw.ai](https://docs.openclaw.ai). For the OpenClaw community and contribution guidelines, see the [GitHub repo](https://github.com/openclaw/openclaw#community).
